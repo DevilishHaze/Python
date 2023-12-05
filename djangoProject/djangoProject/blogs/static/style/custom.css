@@ -1,0 +1,8 @@
+.blog-background {
+    background-image: url('/media/images/cyberpunk.jpg');
+    background-size: cover;
+    background-position: center center;
+    /* Дополнительные стили, чтобы сохранить читаемость контента */
+    padding: 20px;
+    color: #fff;
+}

@@ -1,0 +1,29 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Создать запись</title>
+    <!-- Подключаем Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container"> <!-- Обернем всё в контейнер для выравнивания -->
+        <h1>Создать запись</h1>
+        <form method="post">
+            {% csrf_token %}
+            <!-- Добавим классы Bootstrap к форме и кнопкам -->
+            <form class="form">
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Сохранить</button>
+                <a href="{% url 'blogs:home' %}" class="btn btn-secondary">Назад</a>
+            </form>
+        </form>
+    </div>
+
+    <!-- Подключаем Bootstrap JS (необходим для некоторых функций) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

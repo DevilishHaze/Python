@@ -1,0 +1,26 @@
+
+
+<head>
+
+
+</head>
+<!-- Остальная часть шаблона для отображения поста -->
+<h3>Комментарии:</h3>
+<ul>
+    {% for comment in comments %}
+        <li>
+            <strong>{{ comment.author.username }}:</strong> {{ comment.text }}
+        </li>
+{% endfor %}
+</ul>
+
+<!-- Форма для добавления нового комментария -->
+<h3>Добавить комментарий:</h3>
+
+<form method="post" action="{% url 'blogs:view_post' post_id=post.id %}">
+    {% csrf_token %}
+    {{ comment_form.as_p }}
+    <button type="submit">Добавить комментарий</button>
+
+
+</form>
